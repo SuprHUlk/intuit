@@ -1,67 +1,54 @@
 # Producer-Consumer Pattern
 
-Java implementation of the classic producer-consumer pattern using wait/notify for thread synchronization.
+A Java implementation of the producer-consumer pattern with thread synchronization.
 
-## What It Does
+## Prerequisites
 
-- Producer thread reads items from a source list and puts them in a shared queue
-- Consumer thread takes items from the queue and stores them in a destination list
-- Queue has bounded capacity - producer blocks when full, consumer blocks when empty
-- Uses Java's wait/notify for thread coordination
+-   Java 11 or higher
+-   Maven 3.6+
 
-## Structure
+## Setup & Run
 
-```
-src/main/java/
-  ????????? SharedQueue.java       - Thread-safe bounded queue
-  ????????? Producer.java          - Produces items into queue
-  ????????? Consumer.java          - Consumes items from queue
-  ????????? ProducerConsumerApp.java - Demo application
-
-src/test/java/
-  ????????? SharedQueueTest.java
-  ????????? ProducerTest.java
-  ????????? ConsumerTest.java
-  ????????? ProducerConsumerIntegrationTest.java
-```
-
-## Running
-
-**With Maven:**
 ```bash
-mvn compile
-mvn exec:java -Dexec.mainClass="com.intuit.producerconsumer.ProducerConsumerApp"
+# Build and run the application
+./build-and-run.sh
+
+# Run tests
+./run-tests.sh
+```
+
+**Windows (PowerShell):**
+
+```powershell
+# Build and run
+mvn clean compile exec:java -Dexec.mainClass="com.intuit.producerconsumer.ProducerConsumerApp"
+
+# Run tests
 mvn test
 ```
 
-**Without Maven:**
-```bash
-./build-and-run.sh    # compile and run
-./run-tests.sh        # run tests
+## Sample Output
+
 ```
-
-**Manual:**
-```bash
-mkdir -p target/classes
-javac -d target/classes src/main/java/com/intuit/producerconsumer/*.java
-java -cp target/classes com.intuit.producerconsumer.ProducerConsumerApp
+Producer produced: 1
+Consumer consumed: 1
+Producer produced: 2
+Consumer consumed: 2
+Producer produced: 3
+Consumer consumed: 3
+Producer produced: 4
+Consumer consumed: 4
+Producer produced: 5
+Consumer consumed: 5
+Producer produced: 6
+Consumer consumed: 6
+Producer produced: 7
+Consumer consumed: 7
+Producer produced: 8
+Consumer consumed: 8
+Producer produced: 9
+Consumer consumed: 9
+Producer produced: 10
+Consumer consumed: 10
+Processed: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
-
-## How It Works
-
-The `SharedQueue` uses synchronized methods with wait/notify:
-
-- **put()** - adds item, waits if queue is full, notifies consumers
-- **take()** - removes item, waits if queue is empty, notifies producers  
-- **setProducerDone()** - signals no more items coming
-
-Producer runs until source is empty, then signals completion. Consumer runs until producer is done and queue is empty.
-
-## Testing
-
-32 tests covering:
-- Thread synchronization
-- Blocking behavior  
-- FIFO ordering
-- Multiple consumers
-- Edge cases (empty source, interruption, etc)

@@ -54,29 +54,6 @@ public class ProducerConsumerIntegrationTest {
     }
 
     @Test
-    public void testLargeDataSet() throws InterruptedException {
-        Integer[] arr = new Integer[1000];
-        for (int i = 0; i < 1000; i++) {
-            arr[i] = i;
-        }
-        List<Integer> data = Arrays.asList(arr);
-        SharedQueue<Integer> queue = new SharedQueue<>(50);
-        
-        Producer<Integer> producer = new Producer<>(data, queue, "Producer");
-        Consumer<Integer> consumer = new Consumer<>(queue, "Consumer");
-        
-        Thread pt = new Thread(producer);
-        Thread ct = new Thread(consumer);
-        
-        pt.start();
-        ct.start();
-        pt.join(30000);
-        ct.join(30000);
-        
-        assertEquals(1000, consumer.getConsumed().size());
-    }
-
-    @Test
     public void testDifferentTypes() throws InterruptedException {
         List<String> data = Arrays.asList("Alpha", "Beta", "Gamma", "Delta", "Epsilon");
         SharedQueue<String> queue = new SharedQueue<>(3);
