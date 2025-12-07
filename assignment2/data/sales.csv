@@ -1,0 +1,51 @@
+order_id,date,product,category,price,quantity,region,customer_id,salesperson
+1001,2024-01-15,Laptop,Electronics,1200.00,2,North,C001,SP001
+1002,2024-01-16,Mouse,Electronics,25.50,5,South,C002,SP002
+1003,2024-01-16,Keyboard,Electronics,75.00,3,East,C003,SP001
+1004,2024-01-17,Desk Chair,Furniture,350.00,1,West,C004,SP003
+1005,2024-01-18,Monitor,Electronics,450.00,2,North,C005,SP002
+1006,2024-01-19,Notebook,Stationery,5.00,20,South,C006,SP001
+1007,2024-01-20,Pen Set,Stationery,15.00,10,East,C007,SP003
+1008,2024-01-21,Laptop,Electronics,1200.00,1,West,C008,SP002
+1009,2024-01-22,Desk,Furniture,600.00,1,North,C009,SP001
+1010,2024-01-23,Office Chair,Furniture,400.00,2,South,C010,SP003
+1011,2024-01-24,Tablet,Electronics,800.00,1,East,C011,SP002
+1012,2024-01-25,Wireless Mouse,Electronics,45.00,4,West,C012,SP001
+1013,2024-01-26,USB Cable,Electronics,12.00,8,North,C013,SP003
+1014,2024-01-27,Stapler,Stationery,8.50,15,South,C014,SP002
+1015,2024-01-28,Paper Ream,Stationery,25.00,10,East,C015,SP001
+1016,2024-02-01,Laptop,Electronics,1200.00,3,West,C016,SP003
+1017,2024-02-02,Standing Desk,Furniture,750.00,1,North,C017,SP002
+1018,2024-02-03,Monitor,Electronics,450.00,2,South,C018,SP001
+1019,2024-02-04,Ergonomic Keyboard,Electronics,125.00,2,East,C019,SP003
+1020,2024-02-05,Filing Cabinet,Furniture,275.00,1,West,C020,SP002
+1021,2024-02-06,Printer,Electronics,350.00,1,North,C021,SP001
+1022,2024-02-07,Ink Cartridge,Stationery,45.00,5,South,C022,SP003
+1023,2024-02-08,Whiteboard,Stationery,85.00,2,East,C023,SP002
+1024,2024-02-09,Conference Table,Furniture,1200.00,1,West,C024,SP001
+1025,2024-02-10,Laptop,Electronics,1200.00,2,North,C025,SP003
+1026,2024-02-11,Headphones,Electronics,95.00,3,South,C026,SP002
+1027,2024-02-12,Desk Lamp,Furniture,65.00,4,East,C027,SP001
+1028,2024-02-13,Calculator,Electronics,25.00,6,West,C028,SP003
+1029,2024-02-14,Binder,Stationery,3.50,25,North,C029,SP002
+1030,2024-02-15,Monitor Stand,Furniture,45.00,3,South,C030,SP001
+1031,2024-03-01,Laptop,Electronics,1200.00,1,East,C031,SP003
+1032,2024-03-02,Wireless Keyboard,Electronics,85.00,2,West,C032,SP002
+1033,2024-03-03,Bookshelf,Furniture,225.00,1,North,C033,SP001
+1034,2024-03-04,Scanner,Electronics,275.00,1,South,C034,SP003
+1035,2024-03-05,Highlighter Set,Stationery,12.00,10,East,C035,SP002
+1036,2024-03-06,Desktop Computer,Electronics,950.00,1,West,C036,SP001
+1037,2024-03-07,Storage Cabinet,Furniture,380.00,1,North,C037,SP003
+1038,2024-03-08,Webcam,Electronics,125.00,2,South,C038,SP002
+1039,2024-03-09,Folder Set,Stationery,15.00,8,East,C039,SP001
+1040,2024-03-10,Task Chair,Furniture,295.00,2,West,C040,SP003
+1041,2024-03-11,External Hard Drive,Electronics,150.00,2,North,C041,SP002
+1042,2024-03-12,Label Maker,Stationery,55.00,3,South,C042,SP001
+1043,2024-03-13,Monitor,Electronics,450.00,1,East,C043,SP003
+1044,2024-03-14,Laptop,Electronics,1200.00,1,West,C044,SP002
+1045,2024-03-15,Shredder,Electronics,180.00,1,North,C045,SP001
+1046,2024-03-16,Clipboard,Stationery,6.00,12,South,C046,SP003
+1047,2024-03-17,Reception Desk,Furniture,850.00,1,East,C047,SP002
+1048,2024-03-18,Surge Protector,Electronics,35.00,5,West,C048,SP001
+1049,2024-03-19,Envelope Pack,Stationery,18.00,6,North,C049,SP003
+1050,2024-03-20,Office Suite Software,Electronics,450.00,3,South,C050,SP002
