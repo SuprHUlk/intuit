@@ -23,6 +23,7 @@ public class Producer<T> implements Runnable {
         try {
             for (T item : source) {
                 queue.put(item);
+                System.out.println("Producer produced: " + item);
                 Thread.sleep(50); // simulate work
             }
         } catch (InterruptedException e) {

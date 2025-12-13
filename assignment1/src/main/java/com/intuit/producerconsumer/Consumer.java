@@ -25,6 +25,7 @@ public class Consumer<T> implements Runnable {
             T item;
             while ((item = queue.take()) != null) {
                 consumed.add(item);
+                System.out.println("Consumer consumed: " + item);
                 Thread.sleep(75); // simulate work
             }
         } catch (InterruptedException e) {
