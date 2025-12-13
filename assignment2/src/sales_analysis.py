@@ -7,7 +7,7 @@ from functools import reduce
 from typing import List, Dict, Any, Callable
 from datetime import datetime
 import os
-
+from collections import defaultdict
 
 class SalesRecord:
     
@@ -142,12 +142,11 @@ class SalesDataAnalyzer:
         
         return list(filter(lambda c: c['total_spending'] >= min_spending, customers))
     
-    def _group_by(self, key_func: Callable[[SalesRecord], Any]) -> Dict[Any, List[SalesRecord]]:
-        return reduce(
-            lambda grps, rec: {**grps, key_func(rec): grps.get(key_func(rec), []) + [rec]},
-            self.sales_data,
-            {}
-        )
+    def _group_by(self, key_func):
+        groups = defaultdict(list)
+        for rec in self.sales_data:
+            groups[key_func(rec)].append(rec)
+        return dict(groups)
 
 
 def print_analysis_results(analyzer: SalesDataAnalyzer) -> None:
